@@ -13,7 +13,7 @@ Provides feign request interceptors to sign http requests using [AWS Signature V
 
 Include the following dependency in your project:
 
-```
+```xml
 <dependency>
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4-sdkv2</artifactId>
