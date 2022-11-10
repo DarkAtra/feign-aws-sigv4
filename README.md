@@ -2,7 +2,7 @@
 
 # feign-aws-sigv4
 
-Provides feign request interceptors to sign http requests with [AWS Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+Provides feign request interceptors to sign http requests using [AWS Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 
 | Artifact Id             | AWS SDK Version | Status              |
 |-------------------------|-----------------|---------------------|
