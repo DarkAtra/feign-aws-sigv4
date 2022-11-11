@@ -61,7 +61,7 @@ jobs:
           npm run synth
 
       - name: Apply Infrastructure for Integration Tests
-        working-directory: integration-tests/infrastructure/cdktf.out/stacks/infrastructure
+        working-directory: integration-tests/infrastructure/cdktf.out/stacks/feign-aws-sigv4-integration-tests
         run: |
           terraform init
           terraform apply -auto-approve
@@ -70,7 +70,7 @@ jobs:
         run: mvn -B -ntp clean install
 
       - name: Apply Infrastructure for Integration Tests
-        working-directory: integration-tests/infrastructure/cdktf.out/stacks/infrastructure
+        working-directory: integration-tests/infrastructure/cdktf.out/stacks/feign-aws-sigv4-integration-tests
         run: |
           terraform destroy -auto-approve
 
