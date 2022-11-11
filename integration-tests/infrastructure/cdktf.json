@@ -1,0 +1,10 @@
+{
+  "language": "typescript",
+  "app": "npx ts-node main.ts",
+  "projectId": "feign-aws-sigv4-integration-tests",
+  "sendCrashReports": "false",
+  "context": {
+    "excludeStackIdFromLogicalIds": "true",
+    "allowSepCharsInLogicalIds": "true"
+  }
+}

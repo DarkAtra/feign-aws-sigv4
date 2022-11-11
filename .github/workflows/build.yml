@@ -10,15 +10,16 @@ on:
       - '**/pom.xml'
       - 'pom.xml'
 
+concurrency:
+  group: ci-main
+
 permissions:
-  # used by semantic release
+  # used by cycjimmy/semantic-release-action
   contents: write
   issues: write
   pull-requests: write
-  # used to publish the docker image
-  packages: write
-  # used by trivy
-  security-events: write
+  # used by aws-actions/configure-aws-credentials
+  id-token: write
 
 jobs:
   build:
@@ -36,8 +37,36 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
+      - name: Setup Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Setup AWS Credentials for Integration Tests
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: eu-central-1
+          role-to-assume: arn:aws:iam::956243129466:role/github-deployer
+
+      - name: Synth Infrastructure for Integration Tests
+        working-directory: integration-tests/infrastructure
+        run: |
+          npm ci
+          npm run synth
+
+      - name: Apply Infrastructure for Integration Tests
+        working-directory: integration-tests/infrastructure/cdktf.out/stacks/infrastructure
+        run: |
+          terraform init
+          terraform apply -auto-approve
+
       - name: Run Tests
         run: mvn -B -ntp clean install
+
+      - name: Apply Infrastructure for Integration Tests
+        working-directory: integration-tests/infrastructure/cdktf.out/stacks/infrastructure
+        run: |
+          terraform destroy -auto-approve
 
       - name: Create new release
         uses: cycjimmy/semantic-release-action@v3
