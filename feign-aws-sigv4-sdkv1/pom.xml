@@ -10,7 +10,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>feign-aws-sigv4-sdkv2</artifactId>
+    <artifactId>feign-aws-sigv4-sdkv1</artifactId>
 
     <properties>
         <apiGatewayUrl/>
@@ -29,10 +29,10 @@
             <artifactId>feign-aws-sigv4-common</artifactId>
         </dependency>
 
-        <!-- Aws Sdk V2 -->
+        <!-- Aws Sdk V1 -->
         <dependency>
-            <groupId>software.amazon.awssdk</groupId>
-            <artifactId>auth</artifactId>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-sts</artifactId>
         </dependency>
 
         <!-- JUnit5 -->

@@ -43,6 +43,8 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>feign-aws-sigv4-common</module>
+        <module>feign-aws-sigv4-sdkv1</module>
         <module>feign-aws-sigv4-sdkv2</module>
     </modules>
 
@@ -56,6 +58,7 @@
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <kotlin.version>1.7.21</kotlin.version>
 
+        <awssdk-v1.version>1.12.340</awssdk-v1.version>
         <awssdk-v2.version>2.18.14</awssdk-v2.version>
         <feign.version>12.0</feign.version>
         <assertj.version>3.23.1</assertj.version>
@@ -73,6 +76,13 @@
                 <version>${kotlin.version}</version>
             </dependency>
 
+            <!-- Common -->
+            <dependency>
+                <groupId>de.darkatra</groupId>
+                <artifactId>feign-aws-sigv4-common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
             <!-- Feign -->
             <dependency>
                 <groupId>io.github.openfeign</groupId>
@@ -80,6 +90,13 @@
                 <version>${feign.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- Aws Sdk V1 -->
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-sts</artifactId>
+                <version>${awssdk-v1.version}</version>
             </dependency>
 
             <!-- Aws Sdk V2 -->
