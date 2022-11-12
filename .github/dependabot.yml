@@ -8,6 +8,11 @@ updates:
       - dependency-name: software.amazon.awssdk:*
         update-types: [ "version-update:semver-patch" ]
 
+  - package-ecosystem: "npm"
+    directory: "/integration-tests/infrastructure"
+    schedule:
+      interval: "weekly"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

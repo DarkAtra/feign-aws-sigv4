@@ -34,8 +34,8 @@ internal class AwsSignatureV4RequestInterceptorTest {
 
         val testClient = TestClient.create(wireMockRuntimeInfo.httpBaseUrl, awsSignatureV4RequestInterceptor)
 
-        val queryParameter = "test"
-        val expectedResponse = "Hello World!"
+        val queryParameter = "query-param"
+        val expectedResponse = "response-body"
 
         wireMockRuntimeInfo.wireMock.register(
             get(urlPathEqualTo("/path"))
