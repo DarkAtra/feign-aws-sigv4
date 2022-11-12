@@ -1,6 +1,6 @@
-package de.darkatra
+package de.darkatra.feign.sdkv2
 
-import de.darkatra.util.TestClient
+import de.darkatra.feign.sdkv2.util.TestClient
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider

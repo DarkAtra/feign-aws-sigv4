@@ -1,5 +1,6 @@
-package de.darkatra
+package de.darkatra.feign.sdkv2
 
+import de.darkatra.feign.common.AwsSignatureV4Constants
 import feign.RequestInterceptor
 import feign.RequestTemplate
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider

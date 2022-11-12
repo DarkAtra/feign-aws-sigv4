@@ -1,4 +1,4 @@
-package de.darkatra.util
+package de.darkatra.feign.sdkv2.util
 
 import feign.Feign
 import feign.Param

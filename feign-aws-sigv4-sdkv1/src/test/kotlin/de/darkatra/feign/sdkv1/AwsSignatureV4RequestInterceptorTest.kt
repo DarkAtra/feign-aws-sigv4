@@ -1,19 +1,16 @@
-package de.darkatra
+package de.darkatra.feign.sdkv1
 
-import com.github.tomakehurst.wiremock.client.WireMock.aResponse
-import com.github.tomakehurst.wiremock.client.WireMock.equalTo
-import com.github.tomakehurst.wiremock.client.WireMock.get
-import com.github.tomakehurst.wiremock.client.WireMock.matching
-import com.github.tomakehurst.wiremock.client.WireMock.post
-import com.github.tomakehurst.wiremock.client.WireMock.urlPathEqualTo
+import com.amazonaws.auth.AWSStaticCredentialsProvider
+import com.amazonaws.auth.BasicSessionCredentials
+import com.amazonaws.regions.Region
+import com.amazonaws.regions.Regions
+import com.github.tomakehurst.wiremock.client.WireMock
 import com.github.tomakehurst.wiremock.junit5.WireMockRuntimeInfo
 import com.github.tomakehurst.wiremock.junit5.WireMockTest
-import de.darkatra.util.TestClient
+import de.darkatra.feign.common.AwsSignatureV4Constants
+import de.darkatra.feign.sdkv2.util.TestClient
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import software.amazon.awssdk.auth.credentials.AwsSessionCredentials
-import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider
-import software.amazon.awssdk.regions.Region
 
 @WireMockTest
 internal class AwsSignatureV4RequestInterceptorTest {
@@ -26,8 +23,8 @@ internal class AwsSignatureV4RequestInterceptorTest {
         private const val REGION = "eu-central-1"
     }
 
-    private val awsCredentialsProvider = StaticCredentialsProvider.create(AwsSessionCredentials.create(ACCESS_KEY, SECRET_KEY, SESSION_TOKEN))
-    private val awsSignatureV4RequestInterceptor = AwsSignatureV4RequestInterceptor(awsCredentialsProvider, SERVICE, Region.of(REGION))
+    private val awsCredentialsProvider = AWSStaticCredentialsProvider(BasicSessionCredentials(ACCESS_KEY, SECRET_KEY, SESSION_TOKEN))
+    private val awsSignatureV4RequestInterceptor = AwsSignatureV4RequestInterceptor(awsCredentialsProvider, SERVICE, Region.getRegion(Regions.fromName(REGION)))
 
     @Test
     internal fun shouldSignGetRequestWithQueryParameters(wireMockRuntimeInfo: WireMockRuntimeInfo) {
@@ -38,22 +35,22 @@ internal class AwsSignatureV4RequestInterceptorTest {
         val expectedResponse = "response-body"
 
         wireMockRuntimeInfo.wireMock.register(
-            get(urlPathEqualTo("/path"))
-                .withQueryParam("query", equalTo(queryParameter))
+            WireMock.get(WireMock.urlPathEqualTo("/path"))
+                .withQueryParam("query", WireMock.equalTo(queryParameter))
                 .withHeader(
                     AwsSignatureV4Constants.AUTHORIZATION,
-                    matching("AWS4-HMAC-SHA256 Credential=$ACCESS_KEY/[0-9]{8}/$REGION/$SERVICE/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=[a-z0-9]+")
+                    WireMock.matching("AWS4-HMAC-SHA256 Credential=$ACCESS_KEY/[0-9]{8}/$REGION/$SERVICE/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=[a-z0-9]+")
                 )
                 .withHeader(
                     AwsSignatureV4Constants.X_AMZ_DATE,
-                    matching("[0-9]{8}T[0-9]{6}Z")
+                    WireMock.matching("[0-9]{8}T[0-9]{6}Z")
                 )
                 .withHeader(
                     AwsSignatureV4Constants.X_AMZ_SECURITY_TOKEN,
-                    equalTo(SESSION_TOKEN)
+                    WireMock.equalTo(SESSION_TOKEN)
                 )
                 .willReturn(
-                    aResponse()
+                    WireMock.aResponse()
                         .withStatus(200)
                         .withBody(expectedResponse)
                 )
@@ -73,22 +70,22 @@ internal class AwsSignatureV4RequestInterceptorTest {
         val expectedResponse = "response-body"
 
         wireMockRuntimeInfo.wireMock.register(
-            post(urlPathEqualTo("/path"))
-                .withRequestBody(equalTo(body))
+            WireMock.post(WireMock.urlPathEqualTo("/path"))
+                .withRequestBody(WireMock.equalTo(body))
                 .withHeader(
                     AwsSignatureV4Constants.AUTHORIZATION,
-                    matching("AWS4-HMAC-SHA256 Credential=$ACCESS_KEY/[0-9]{8}/$REGION/$SERVICE/aws4_request, SignedHeaders=content-length;host;x-amz-date;x-amz-security-token, Signature=[a-z0-9]+")
+                    WireMock.matching("AWS4-HMAC-SHA256 Credential=$ACCESS_KEY/[0-9]{8}/$REGION/$SERVICE/aws4_request, SignedHeaders=content-length;host;x-amz-date;x-amz-security-token, Signature=[a-z0-9]+")
                 )
                 .withHeader(
                     AwsSignatureV4Constants.X_AMZ_DATE,
-                    matching("[0-9]{8}T[0-9]{6}Z")
+                    WireMock.matching("[0-9]{8}T[0-9]{6}Z")
                 )
                 .withHeader(
                     AwsSignatureV4Constants.X_AMZ_SECURITY_TOKEN,
-                    equalTo(SESSION_TOKEN)
+                    WireMock.equalTo(SESSION_TOKEN)
                 )
                 .willReturn(
-                    aResponse()
+                    WireMock.aResponse()
                         .withStatus(200)
                         .withBody(expectedResponse)
                 )
