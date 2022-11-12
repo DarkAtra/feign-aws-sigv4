@@ -80,6 +80,13 @@ jobs:
         run: |
           mvn -B -ntp clean install failsafe:integration-test -DAPI_GATEWAY_URL=${{ steps.apply-infrastructure.outputs.api-gateway-url }}
 
+      - name: Setup AWS Credentials for Infrastructure
+        if: always()
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: eu-central-1
+          role-to-assume: arn:aws:iam::956243129466:role/github-deployer
+
       - name: Apply Infrastructure for Integration Tests
         if: always()
         working-directory: integration-tests/infrastructure/cdktf.out/stacks/feign-aws-sigv4-integration-tests
