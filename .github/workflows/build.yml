@@ -76,6 +76,7 @@ jobs:
           role-to-assume: ${{ steps.apply-infrastructure.integration-test-role-arn }}
 
       - name: Run Tests
+        id: run-tests
         run: mvn -B -ntp clean install failsafe:integration-test
         env:
           API_GATEWAY_URL: ${{ steps.apply-infrastructure.api-gateway-url }}
@@ -87,6 +88,7 @@ jobs:
           terraform destroy -auto-approve
 
       - name: Create new release
+        if: steps.run-tests.outcome == 'success'
         uses: cycjimmy/semantic-release-action@v3
         with:
           extra_plugins: |
