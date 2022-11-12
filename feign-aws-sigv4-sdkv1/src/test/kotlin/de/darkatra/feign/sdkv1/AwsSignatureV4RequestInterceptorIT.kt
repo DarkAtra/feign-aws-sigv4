@@ -37,6 +37,6 @@ internal class AwsSignatureV4RequestInterceptorIT {
     }
 
     private fun getApiGatewayUrl(): String {
-        return "https://hi772yefv9.execute-api.eu-central-1.amazonaws.com/" // System.getProperty("apiGatewayUrl")
+        return System.getProperty("apiGatewayUrl")
     }
 }
