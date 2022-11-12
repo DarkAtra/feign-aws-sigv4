@@ -77,7 +77,7 @@ jobs:
 
       - name: Run Tests
         run: mvn -B -ntp clean install failsafe:integration-test
-        environment:
+        env:
           API_GATEWAY_URL: ${{ steps.apply-infrastructure.api-gateway-url }}
 
       - name: Apply Infrastructure for Integration Tests
