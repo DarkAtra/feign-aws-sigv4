@@ -78,7 +78,7 @@ jobs:
       - name: Run Tests
         id: run-tests
         run: |
-          mvn -B -ntp clean install failsafe:integration-test -DAPI_GATEWAY_URL=${{ steps.apply-infrastructure.outputs.api-gateway-url }}
+          mvn -B -ntp clean install failsafe:integration-test failsafe:verify -DapiGatewayUrl=${{ steps.apply-infrastructure.outputs.api-gateway-url }}
 
       - name: Setup AWS Credentials for Infrastructure
         if: always()

@@ -32,6 +32,6 @@ internal class AwsSignatureV4RequestInterceptorIT {
     }
 
     private fun getApiGatewayUrl(): String {
-        return System.getenv("API_GATEWAY_URL")
+        return System.getProperty("apiGatewayUrl")
     }
 }

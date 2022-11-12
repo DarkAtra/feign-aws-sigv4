@@ -12,6 +12,10 @@
 
     <artifactId>feign-aws-sigv4-sdkv2</artifactId>
 
+    <properties>
+        <apiGatewayUrl/>
+    </properties>
+
     <dependencies>
         <!-- Kotlin -->
         <dependency>
@@ -52,4 +56,17 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <apiGatewayUrl>${apiGatewayUrl}</apiGatewayUrl>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
