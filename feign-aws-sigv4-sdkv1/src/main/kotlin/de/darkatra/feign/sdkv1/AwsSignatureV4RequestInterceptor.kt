@@ -28,7 +28,6 @@ class AwsSignatureV4RequestInterceptor(
         val body = template.body()
         val url = template.feignTarget().url()
         val path = template.path()
-        val queryParameters = template.queries()
 
         // convert the RequestTemplate to an SdkHttpFullRequest to delegate the signing process to the AWS SDK
         val request = DefaultRequest<Unit>(service).apply {
@@ -42,9 +41,7 @@ class AwsSignatureV4RequestInterceptor(
                 path.startsWith("/") -> path.removePrefix("/")
                 else -> path
             }
-            parameters = queryParameters.entries.stream()
-                .map { header -> header.key to header.value.toList() }
-                .collect(Collectors.toMap(Pair<String, List<String>>::first, Pair<String, List<String>>::second))
+            parameters = convertQueryParameters(template.queries())
             httpMethod = HttpMethodName.fromValue(template.method())
             headers = convertHeaders(template.headers())
             content = body?.let { ByteArrayInputStream(it) }
@@ -56,6 +53,12 @@ class AwsSignatureV4RequestInterceptor(
         request.headers.entries.stream()
             .filter { header -> AwsSignatureV4Constants.HEADERS_TO_COPY.contains(header.key) }
             .forEach { header -> template.header(header.key, header.value) }
+    }
+
+    private fun convertQueryParameters(queryParameters: Map<String, Collection<String>>): MutableMap<String, List<String>> {
+        return queryParameters.entries.stream()
+            .map { header -> header.key to header.value.toList() }
+            .collect(Collectors.toMap(Pair<String, List<String>>::first, Pair<String, List<String>>::second))
     }
 
     private fun convertHeaders(headers: Map<String, Collection<String>>): Map<String, String> {
