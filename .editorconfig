@@ -10,10 +10,17 @@ trim_trailing_whitespace = true
 max_line_length = 160
 tab_width = 4
 
+[*.js]
+ij_javascript_use_double_quotes = false
+ij_javascript_force_quote_style = true
+ij_javascript_force_semicolon_style = true
+ij_javascript_enforce_trailing_comma = remove
+
 [*.ts]
 ij_typescript_use_double_quotes = false
 ij_typescript_force_quote_style = true
 ij_typescript_force_semicolon_style = true
+ij_typescript_enforce_trailing_comma = remove
 
 [{*.yaml, *.yml, *.md, *.json}]
 indent_size = 2

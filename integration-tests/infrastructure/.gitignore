@@ -7,5 +7,4 @@ cdktf.log
 .gen
 .terraform
 tsconfig.tsbuildinfo
-!jest.config.js
-!setup.js
+!lambda/index.js

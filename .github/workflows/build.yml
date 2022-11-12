@@ -48,7 +48,7 @@ jobs:
           terraform_version: 1.3.4
           terraform_wrapper: false
 
-      - name: Setup AWS Credentials for Integration Tests
+      - name: Setup AWS Credentials for Infrastructure
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: eu-central-1
@@ -61,15 +61,27 @@ jobs:
           npm run synth
 
       - name: Apply Infrastructure for Integration Tests
+        id: apply-infrastructure
         working-directory: integration-tests/infrastructure/cdktf.out/stacks/feign-aws-sigv4-integration-tests
         run: |
           terraform init
           terraform apply -auto-approve
+          echo "integration-test-role-arn=$(terraform output -raw integration-test-role-arn)" >> $GITHUB_OUTPUT
+          echo "api-gateway-url=$(terraform output -raw api-gateway-url)" >> $GITHUB_OUTPUT
+
+      - name: Setup AWS Credentials for Integration Tests
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: eu-central-1
+          role-to-assume: ${{ steps.apply-infrastructure.integration-test-role-arn }}
 
       - name: Run Tests
-        run: mvn -B -ntp clean install
+        run: mvn -B -ntp clean install failsafe:integration-test
+        environment:
+          API_GATEWAY_URL: ${{ steps.apply-infrastructure.api-gateway-url }}
 
       - name: Apply Infrastructure for Integration Tests
+        if: always()
         working-directory: integration-tests/infrastructure/cdktf.out/stacks/feign-aws-sigv4-integration-tests
         run: |
           terraform destroy -auto-approve
