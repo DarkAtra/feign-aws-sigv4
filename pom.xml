@@ -58,7 +58,7 @@
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <kotlin.version>1.7.21</kotlin.version>
 
-        <awssdk-v1.version>1.12.340</awssdk-v1.version>
+        <awssdk-v1.version>1.12.341</awssdk-v1.version>
         <awssdk-v2.version>2.18.14</awssdk-v2.version>
         <feign.version>12.0</feign.version>
         <assertj.version>3.23.1</assertj.version>
