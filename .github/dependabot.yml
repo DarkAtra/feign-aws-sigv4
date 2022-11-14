@@ -7,6 +7,8 @@ updates:
     ignore:
       - dependency-name: software.amazon.awssdk:*
         update-types: [ "version-update:semver-patch" ]
+      - dependency-name: com.amazonaws:*
+        update-types: [ "version-update:semver-patch" ]
 
   - package-ecosystem: "npm"
     directory: "/integration-tests/infrastructure"
