@@ -52,7 +52,7 @@ Include the following dependency in your project:
 <dependency>
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4-sdkv2</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 </dependency>
 ```
 
@@ -116,8 +116,8 @@ This can be done by applying the Terraform CDK project found in `integration-tes
 6. Wait until everything is set up. This should only take a few seconds.
 7. Execute the Tests by running:
     ```
-    # cd back to /
     export API_GATEWAY_URL=$(terraform output -raw api-gateway-url)
+    # cd back to /
     cd ../../../../..
     mvn -B -ntp clean install failsafe:integration-test failsafe:verify -DapiGatewayUrl=$API_GATEWAY_URL
     ```
