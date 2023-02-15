@@ -42,8 +42,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
-          cache-dependency-path: integration-tests/infrastructure/package-lock.json
+          cache: 'yarn'
+          cache-dependency-path: integration-tests/infrastructure/yarn.lock
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
@@ -60,8 +60,8 @@ jobs:
       - name: Synth Infrastructure for Integration Tests
         working-directory: integration-tests/infrastructure
         run: |
-          npm ci
-          npm run synth
+          yarn install --immutable --immutable-cache --check-cache
+          yarn run synth
 
       - name: Apply Infrastructure for Integration Tests
         id: apply-infrastructure

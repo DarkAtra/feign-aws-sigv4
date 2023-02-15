@@ -101,8 +101,8 @@ This can be done by applying the Terraform CDK project found in `integration-tes
     ```
     # cd into /integration-tests/infrastructure
     cd integration-tests/infrastructure
-    npm ci
-    npm run synth
+    yarn install --immutable --immutable-cache --check-cache
+    yarn run synth
     ```
 3. Obtain Credentials for your AWS Account. This step highly depends on how the AWS Account is set up. You'll need permissions for API Gateway, Lambda and IAM.
 4. Apply the synthesized Terraform CDK Stack by running:

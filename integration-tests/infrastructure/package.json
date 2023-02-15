@@ -7,8 +7,7 @@
   "private": true,
   "scripts": {
     "presynth": "npx rimraf -rf cdktf.out",
-    "synth": "npx ts-node main.ts",
-    "upgrade": "npm i cdktf@latest cdktf-cli@latest"
+    "synth": "npx ts-node main.ts"
   },
   "engines": {
     "node": ">=16.0"
