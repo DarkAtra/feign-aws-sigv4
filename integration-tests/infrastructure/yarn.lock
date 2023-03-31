@@ -3,9 +3,9 @@
 
 
 "@cdktf/provider-aws@^12.0.0":
-  version "12.0.10"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-12.0.10.tgz#b95ab7535a2cb9580bd77d8fa3930243255c43be"
-  integrity sha512-+0NL0Aic3+Xme+0fuQs9Eo3tijuuuiXmZESAvQ/Y5E8yUHhhw0F4ODf+URsFK+4/fHEGJlsnodRezvZjCBggsA==
+  version "12.0.12"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-12.0.12.tgz#d4ce1c6738a02ce3082aa199e54d50ff45053444"
+  integrity sha512-Z5yAXWFJVtXUD+w/s9XjlaZVaJR7/Kan6fA/DWNZxB2oVWocFLjOsZxUDVsecDPp45mmuwbI8zo6e9WVzTjN5w==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -53,9 +53,9 @@
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
 "@types/node@^18.11.18":
-  version "18.15.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.5.tgz#3af577099a99c61479149b716183e70b5239324a"
-  integrity sha512-Ark2WDjjZO7GmvsyFFf81MXuGTA/d6oP38anyxWOL6EREyBKAxKoFHwBhaZxCfLRLpO8JgVXwqOwSwa7jRcjew==
+  version "18.15.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.11.tgz#b3b790f09cb1696cffcec605de025b088fa4225f"
+  integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
@@ -178,9 +178,9 @@ concat-map@0.0.1:
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
 constructs@^10.1.229:
-  version "10.1.284"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.284.tgz#a157e1f60b691583bbca7ad069cf719211cfe570"
-  integrity sha512-PuvECXLnOUotHX7I0Y+UnpiZqh4+MgR1CHVI2zAlniRN09cNEGRuXadd5lXh7STX4CgzOKBWCBoW1i8k/m4vKA==
+  version "10.1.297"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.297.tgz#85e6b5c4268109a755ef42cbd5561e295a2d9e2c"
+  integrity sha512-4bcwVZZfv9comPu04SEeWMTk9ajCweFPCNiJs1Pe9s23BbB6xtuku+dgr2KutUeViXPIijmsQuOyxMlFTrF6Pg==
 
 core-util-is@~1.0.0:
   version "1.0.3"
