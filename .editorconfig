@@ -22,5 +22,5 @@ ij_typescript_force_quote_style = true
 ij_typescript_force_semicolon_style = true
 ij_typescript_enforce_trailing_comma = remove
 
-[{*.yaml, *.yml, *.md, *.json}]
+[{*.yaml,*.yml,*.md,*.json}]
 indent_size = 2
