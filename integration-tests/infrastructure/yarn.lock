@@ -53,9 +53,9 @@
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
 "@types/node@^18.11.18":
-  version "18.15.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.11.tgz#b3b790f09cb1696cffcec605de025b088fa4225f"
-  integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
+  version "18.16.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.2.tgz#2f610ea71034b3971c312192377f8a7178eb57f1"
+  integrity sha512-GQW/JL/5Fz/0I8RpeBG9lKp0+aNcXEaVL71c0D2Q0QHDTFvlYKT7an0onCUXj85anv7b4/WesqdfchLc0jtsCg==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
@@ -153,10 +153,10 @@ buffer@^5.5.0:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
 
-cdktf@^0.15.0:
-  version "0.15.5"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.15.5.tgz#a87ca97cf0f0e1e21eeffaf4dfca2701e00293df"
-  integrity sha512-fcamLs7SKz+kTbQFf+fOXDGvmwT5bH4bHwp+jkVKjGTRsu6C8z5oFVAjKYm+aP1tC7sSWG967+ihSx6+uPNAGw==
+cdktf@^0.16.0:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.16.1.tgz#36011ae559e9451442cfb30c00dba9d4ca6ecd00"
+  integrity sha512-rXbpQcZWqBSvdeYP1MsyUnB/VBkLa8dTSlJQkhRqs7MwmsRypr2xUwxYZjmiIWotadbSq7lxp60nmm4L181+7g==
   dependencies:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"
@@ -178,9 +178,9 @@ concat-map@0.0.1:
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
 constructs@^10.1.229:
-  version "10.1.306"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.306.tgz#07c361f56eff42bae9338c65587b9dede4d1f4f6"
-  integrity sha512-7UruYLZLOk7qN9fQRX339iluZnqLVEPg8jSiKmKtehY4Sk0V91AOCe8/YccpYYTsMud3EKha8TT1zJa5SJPQug==
+  version "10.2.10"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.10.tgz#41aa1edc1b7e9b8db2c377064837c1c578a16216"
+  integrity sha512-FTxjGUJg5JOMTfX+pCxoG6nkauYFpcX9YSe3x0+P0xwg77hg7NzYGd4tdGQJFOwbiku3r943XQ0nlcYgJhEF9w==
 
 core-util-is@~1.0.0:
   version "1.0.3"
