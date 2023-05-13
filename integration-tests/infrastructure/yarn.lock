@@ -3,9 +3,9 @@
 
 
 "@cdktf/provider-aws@^14.0.0":
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-14.0.1.tgz#b97d4abb18de2a080c2c69a3c509e9ae61737f3d"
-  integrity sha512-8ZVGtS7PEbHMVRs3SzqVNW/DFZQF5TiIvHn1rnmbk9B9z1EhkjugyKra6RE0hqngvk82KmU7sm4pAroNe/D3ig==
+  version "14.0.4"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-14.0.4.tgz#be096f1e219c8c32a1f7ce801ec8f11f62e8c832"
+  integrity sha512-/NGdzzVPvTchei/2O7AdId9WX3GequSQwlJ5wuAeMKCLlUBCqRPVU1ndsr48tkwvFdyefgK3Goh5/1xeiUOSdw==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -53,9 +53,9 @@
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
 "@types/node@^18.11.18":
-  version "18.16.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.8.tgz#fcd9bd0a793aba2701caff4aeae7c988d4da6ce5"
-  integrity sha512-p0iAXcfWCOTCBbsExHIDFCfwsqFwBTgETJveKMT+Ci3LY9YqQCI91F5S+TB20+aRCXpcWfvx5Qr5EccnwCm2NA==
+  version "18.16.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.9.tgz#e79416d778a8714597342bb87efb5a6e914f7a73"
+  integrity sha512-IeB32oIV4oGArLrd7znD2rkHQ6EDCM+2Sr76dJnrHwv9OHBTTM6nuDLK9bmikXzPa0ZlWMWtRGo/Uw4mrzQedA==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
