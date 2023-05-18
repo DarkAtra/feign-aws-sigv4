@@ -53,9 +53,9 @@
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
 "@types/node@^18.11.18":
-  version "18.16.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.9.tgz#e79416d778a8714597342bb87efb5a6e914f7a73"
-  integrity sha512-IeB32oIV4oGArLrd7znD2rkHQ6EDCM+2Sr76dJnrHwv9OHBTTM6nuDLK9bmikXzPa0ZlWMWtRGo/Uw4mrzQedA==
+  version "18.16.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.12.tgz#f11e19055c5b3daeb79dc6eb7ccdd3d036313034"
+  integrity sha512-tIRrjbY9C277MOfP8M3zjMIhtMlUJ6YVqkGgLjz+74jVsdf4/UjC6Hku4+1N0BS0qyC0JAS6tJLUk9H6JUKviQ==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
@@ -178,9 +178,9 @@ concat-map@0.0.1:
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
 constructs@^10.1.229:
-  version "10.2.22"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.22.tgz#96aaba7c87b826d40b30342edf6cd1a2d55d12f5"
-  integrity sha512-2slAbs1W1uMpWYiBKQb0iu0cE845bSoohizAFFrHwk1K2D28Qsg9qSEaUhZBa/VlhH5Gau+d01lwh+5KSKaRtA==
+  version "10.2.27"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.27.tgz#44835f100064604be21f32820209cb9edd674910"
+  integrity sha512-77XJ+QjfQQpLOlpSxOuYeUxsyp5EDI888p7RVPJlsbN9aYeEPb3jPodptvcM5rK+dB4gN9UMTsi99K4zSe8ARg==
 
 core-util-is@~1.0.0:
   version "1.0.3"
