@@ -58,15 +58,15 @@
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <kotlin.version>1.8.21</kotlin.version>
 
-        <awssdk-v1.version>1.12.470</awssdk-v1.version>
-        <awssdk-v2.version>2.20.67</awssdk-v2.version>
+        <awssdk-v1.version>1.12.473</awssdk-v1.version>
+        <awssdk-v2.version>2.20.70</awssdk-v2.version>
         <feign.version>12.3</feign.version>
         <assertj.version>3.24.2</assertj.version>
         <wiremock.version>2.35.0</wiremock.version>
 
         <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>3.1.0</maven-failsafe-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
     </properties>
 
     <dependencyManagement>
