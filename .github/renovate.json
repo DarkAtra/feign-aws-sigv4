@@ -13,7 +13,7 @@
   "packageRules": [
     {
       "matchPackagePatterns": [
-        "de.idealo:*"
+        "de.darkatra:*"
       ],
       "enabled": false
     },
