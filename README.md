@@ -12,7 +12,7 @@ Include the following dependency in your project:
 <dependency>
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4-sdkv1</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.10</version>
 </dependency>
 ```
 
@@ -52,7 +52,7 @@ Include the following dependency in your project:
 <dependency>
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4-sdkv2</artifactId>
-    <version>2.0.1</version>
+    <version>2.0.10</version>
 </dependency>
 ```
 
