@@ -154,13 +154,13 @@ buffer@^5.5.0:
     ieee754 "^1.1.13"
 
 cdktf@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.17.0.tgz#65f6fc5035c17017b23d3d26a7eb83d1db659e58"
-  integrity sha512-4R57uBLBqeb8NgfKZdn/az8UE3yXxGHyzH6Xjsz1Oo9kNvSkPibX7YqNLUpuCgdYNVgU2fdaNoHj9h4LXc6iCw==
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.17.1.tgz#edb0e85e8123890e62bab2e433eeca853db4fb8f"
+  integrity sha512-Bk9Al0z+RA3/hW372tf61QCbg2zGOVXjXlXC1taD37AfXpBgqD1fKOhJ980B93VcyMil2mIkubFC9hdrn2nziQ==
   dependencies:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"
-    semver "^7.3.8"
+    semver "^7.5.3"
 
 compress-commons@^4.1.0:
   version "4.1.1"
@@ -178,9 +178,9 @@ concat-map@0.0.1:
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
 constructs@^10.1.229:
-  version "10.2.67"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.67.tgz#d5ada712b2f0f1ff9051d418503b6f2e5b1246f5"
-  integrity sha512-by7CfdghHj3+/XognKl3pSmHQH6xcFU+psT8RT5/4EZcaJE4Q2IXGzXoAirn0l+92djGASp3cCEnZ04cJahBsg==
+  version "10.2.69"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.69.tgz#5bb06693b317140fe310797ffd52c0d6cc595913"
+  integrity sha512-0AiM/uQe5Uk6JVe/62oolmSN2MjbFQkOlYrM3fFGZLKuT+g7xlAI10EebFhyCcZwI2JAcWuWCmmCAyCothxjuw==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -398,10 +398,10 @@ safe-buffer@~5.2.0:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
 
-semver@^7.3.8:
-  version "7.5.3"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.3.tgz#161ce8c2c6b4b3bdca6caadc9fa3317a4c4fe88e"
-  integrity sha512-QBlUtyVk/5EeHbi7X0fw6liDZc7BBmEaSYn01fMU1OUYbf6GPsbTtd8WmnqbI20SeycoHSeiybkE/q1Q+qlThQ==
+semver@^7.5.3:
+  version "7.5.4"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
+  integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
   dependencies:
     lru-cache "^6.0.0"
 
