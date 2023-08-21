@@ -3,9 +3,9 @@
 
 
 "@cdktf/provider-aws@^16.0.0":
-  version "16.0.7"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-16.0.7.tgz#fce8952f0b23c94a25d4d02f26989a51bec20937"
-  integrity sha512-jYlkhvT3BveXa2imj2xqrIS9ckW+AF9L0WhkbzUcmXMxM85TjZnOZ3W8zDdrgMRDjwSR6qtb7AsyK1ZY3SirfQ==
+  version "16.0.9"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-16.0.9.tgz#5182e383c917d4a6547b1b2fc774d14e59a10c93"
+  integrity sha512-q1MBFog7mj657clH1FkHEpsaL1yf7jcGrhILpyWtTXhyVLlWkUHjQTVCC48IWzVYHcgKuLv3OauuyPZ41hNuJg==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -53,9 +53,9 @@
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
 "@types/node@^18.11.18":
-  version "18.17.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.17.5.tgz#c58b12bca8c2a437b38c15270615627e96dd0bc5"
-  integrity sha512-xNbS75FxH6P4UXTPUJp/zNPq6/xsfdJKussCWNOnz4aULWIRwMgP1LgaB5RiBnMX1DPCYenuqGZfnIAx5mbFLA==
+  version "18.17.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.17.6.tgz#0296e9a30b22d2a8fcaa48d3c45afe51474ca55b"
+  integrity sha512-fGmT/P7z7ecA6bv/ia5DlaWCH4YeZvAQMNpUhrJjtAhOhZfoxS1VLUgU2pdk63efSjQaOJWdXMuAJsws+8I6dg==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
@@ -153,10 +153,10 @@ buffer@^5.5.0:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
 
-cdktf@^0.17.0:
-  version "0.17.3"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.17.3.tgz#8ef8ad34a1946551bcd6f453668552629f2e41f3"
-  integrity sha512-bqAzuuYLc8sy0ZoKw/RnohS6SH6fwAhCsU31vxuEiwu0BVcCaExfjQVZx/iJgmF1TJqk/cu2fMCLUgT3PDAuhQ==
+cdktf@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.18.0.tgz#b79eb924afff7af38877bb4ffdfe3bdf954131b0"
+  integrity sha512-iTWy2g0mCE2YW2hPxdWEzMwCVgyzDyheHWJTS4OcLZsR+lXETFX0lonoc5XGnX8CHBL4AbFY+EEqCUs5v7A4bQ==
   dependencies:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"
