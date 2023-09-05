@@ -28,6 +28,9 @@ jobs:
       packages: write
       # used by aws-actions/configure-aws-credentials
       id-token: write
+    outputs:
+      new-release-published: ${{ steps.semantic-release.outputs.new_release_published }}
+      new-release-version: ${{ steps.semantic-release.outputs.new_release_version }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -98,7 +101,8 @@ jobs:
         run: |
           terraform destroy -auto-approve
 
-      - name: Create new release
+      - id: semantic-release
+        name: Create new release
         if: steps.run-tests.outcome == 'success'
         uses: cycjimmy/semantic-release-action@v3
         with:
@@ -112,6 +116,7 @@ jobs:
     name: Publish to Maven Central
     runs-on: ubuntu-latest
     needs: build
+    if: needs.build.outputs.new-release-published == 'true'
     steps:
       - uses: actions/checkout@v3
 
@@ -126,7 +131,9 @@ jobs:
           server-password: MAVEN_PASSWORD
 
       - name: Publish package
-        run: mvn -B -ntp -Ppublish-ossrh clean deploy -DskipTests
+        run: |
+          mvn -B -ntp versions:set -DgenerateBackupPoms=false -DnewVersion=${{ needs.build.outputs.new-release-version }}
+          mvn -B -ntp -Ppublish-ossrh clean deploy -DskipTests
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
