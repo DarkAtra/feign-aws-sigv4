@@ -72,6 +72,7 @@
         <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
         <dokka-maven-plugin.version>1.9.0</dokka-maven-plugin.version>
+        <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -182,6 +183,7 @@
                 <version>${dokka-maven-plugin.version}</version>
                 <executions>
                     <execution>
+                        <id>attach-javadocs</id>
                         <phase>package</phase>
                         <goals>
                             <goal>javadocJar</goal>
@@ -206,6 +208,36 @@
     </build>
 
     <profiles>
+        <profile>
+            <id>sign-with-gpg</id>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven-gpg-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <keyname>6AC5B1D7</keyname>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
         <profile>
             <id>publish-ossrh</id>
 
