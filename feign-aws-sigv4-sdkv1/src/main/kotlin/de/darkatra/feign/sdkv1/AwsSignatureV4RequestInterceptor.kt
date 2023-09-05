@@ -12,6 +12,13 @@ import java.io.ByteArrayInputStream
 import java.net.URI
 import java.util.stream.Collectors
 
+/**
+ * Feign [RequestInterceptor] that signs http requests with Signature V4. Uses the AWS SDK V1.
+ *
+ * @param awsCredentialsProvider the [AWSCredentialsProvider] used to sign the request
+ * @param service the service to sign the requests for. Use 'execute-api' if you're issuing requests against AWS API Gateway.
+ * @param region the region
+ */
 class AwsSignatureV4RequestInterceptor(
     private val awsCredentialsProvider: AWSCredentialsProvider,
     private val service: String,

@@ -71,6 +71,7 @@
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <dokka-maven-plugin.version>1.9.0</dokka-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -171,6 +172,19 @@
                         <id>attach-sources</id>
                         <goals>
                             <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${dokka-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>javadocJar</goal>
                         </goals>
                     </execution>
                 </executions>
