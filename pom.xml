@@ -62,7 +62,7 @@
         <awssdk-v2.version>2.20.140</awssdk-v2.version>
         <feign.version>12.5</feign.version>
         <assertj.version>3.24.2</assertj.version>
-        <wiremock.version>2.35.0</wiremock.version>
+        <wiremock.version>3.0.1</wiremock.version>
 
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
@@ -128,10 +128,9 @@
 
             <!-- Wiremock -->
             <dependency>
-                <groupId>com.github.tomakehurst</groupId>
-                <artifactId>wiremock-jre8</artifactId>
+                <groupId>org.wiremock</groupId>
+                <artifactId>wiremock</artifactId>
                 <version>${wiremock.version}</version>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
