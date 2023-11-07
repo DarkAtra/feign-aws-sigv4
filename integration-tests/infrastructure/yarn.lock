@@ -3,9 +3,9 @@
 
 
 "@cdktf/provider-aws@^18.0.0":
-  version "18.0.3"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-18.0.3.tgz#d1cd20884c590db9091f91bb7424a77427d56989"
-  integrity sha512-TvWZhPjq7ecLK1umlyPPCfazwqK3qeetYDVrdHJ7eMo3KRmjYEFZnZLtMFFYzhOyr3kmTHPUqbp6UWE41LD+jA==
+  version "18.0.4"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-18.0.4.tgz#f5c98256d82d670f30cc50d112530caae8f77c5c"
+  integrity sha512-CXAMjhwrvEHQuf4P+kDJFDqh8aFbruVxJ1y6sK6/RuA8R6dkS9Bi4X6cXv649JkCNoPgMPbnJn62SfS2Ynn02A==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
