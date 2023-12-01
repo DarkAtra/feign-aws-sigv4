@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@cdktf/provider-aws@18.0.6":
-  version "18.0.6"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-18.0.6.tgz#a9cd7dec0319506c9a2104da60f50c8292dc36ee"
-  integrity sha512-sSMiotJ8IaCCnlcnsUJgSHNqxkquEhnv1UPCGfXpHGvpS7d48rY2Einr2Arja0gdLSMHzOojDLUjFYKE7gjScA==
+"@cdktf/provider-aws@18.0.8":
+  version "18.0.8"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-18.0.8.tgz#ad984cb0c3f5ec50ca2987ccad4839c73c9c0f1f"
+  integrity sha512-z+xItfL6DyikFEzmbwIAr/uv9wedYXeDta2mk6tNiPEd7iHNZgtt18RTEv+qMyx2Rg3BX0I6o1UT+gwWSMfeAA==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -52,10 +52,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
-"@types/node@20.9.3":
-  version "20.9.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.3.tgz#e089e1634436f676ff299596c9531bd2b59fffc6"
-  integrity sha512-nk5wXLAXGBKfrhLB0cyHGbSqopS+nz0BUgZkUQqSHSSgdee0kssp1IAqlQOu333bW+gMNs2QREx7iynm19Abxw==
+"@types/node@20.10.1":
+  version "20.10.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.1.tgz#d2c96f356c3125fedc983d74c424910c3767141c"
+  integrity sha512-T2qwhjWwGH81vUEx4EXmBKsTJRXFXNZTL4v0gi01+zyBmCwzE6TyHszqX01m+QHTEq+EZNo13NeJIdEqf+Myrg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -180,10 +180,10 @@ call-bind@^1.0.5:
     get-intrinsic "^1.2.1"
     set-function-length "^1.1.1"
 
-cdktf@0.19.1:
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.19.1.tgz#1996a0069b97500e2a01df4f473963153541b784"
-  integrity sha512-scZhp2+FEgNUd+l5vaDCHABdwFApB1Lcknn2+dUw8aYwNsMoYT0tWs4AzPg22Z4jQFOIQLIXmBxifhr+RahdRg==
+cdktf@0.19.2:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.19.2.tgz#c93b794a9c8ac6b4e50bc24e80d06d84089a8766"
+  integrity sha512-FHOERDO7i2g/+pUaaZCVDKsbXEBtWYOgELL1UKjNp37DyEmtFlltdsgutVfouoil0C7W5za2IydD6sSeoH5aUw==
   dependencies:
     archiver "5.3.2"
     json-stable-stringify "^1.0.2"
