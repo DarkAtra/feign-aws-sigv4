@@ -13,7 +13,7 @@ Include the following dependency in your project:
 <dependency>
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4-sdkv1</artifactId>
-    <version>2.0.10</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 [//]: # (@formatter:on)
@@ -59,7 +59,7 @@ Include the following dependency in your project:
 <dependency>
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4-sdkv2</artifactId>
-    <version>2.0.10</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 [//]: # (@formatter:on)
