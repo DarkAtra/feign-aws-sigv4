@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "@cdktf/provider-aws": "19.1.1",
-    "cdktf": "0.20.0",
+    "cdktf": "0.20.1",
     "constructs": "10.3.0"
   },
   "devDependencies": {
-    "@types/node": "20.10.8",
+    "@types/node": "20.11.4",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
   }
