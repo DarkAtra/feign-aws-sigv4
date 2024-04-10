@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@cdktf/provider-aws@19.12.0":
-  version "19.12.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.12.0.tgz#b8de404618e898a797757628e8813bf08a0ba040"
-  integrity sha512-Db6WnKQj9ECW5QwCIQjdw9CdRr0eY6pSLzgkd4Df92VqiZXS0F9m5V86e+nIuH+crPEAzQQavga1BG+WPysqfw==
+"@cdktf/provider-aws@19.13.0":
+  version "19.13.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.13.0.tgz#1e651771923b6bd3be3a87fdae8fca109fdf313c"
+  integrity sha512-+YQCk5Z1/pAt9P9h7GEqBaGTVNceIu1bYekG9/we/RFSQuRkDmPwAmtPbTilnZN+BLfQcmVvQsQXSDx5q81vKQ==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -52,10 +52,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
-"@types/node@20.12.2":
-  version "20.12.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.2.tgz#9facdd11102f38b21b4ebedd9d7999663343d72e"
-  integrity sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==
+"@types/node@20.12.7":
+  version "20.12.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.7.tgz#04080362fa3dd6c5822061aa3124f5c152cff384"
+  integrity sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -135,10 +135,10 @@ call-bind@^1.0.5:
     get-intrinsic "^1.2.1"
     set-function-length "^1.1.1"
 
-cdktf@0.20.5:
-  version "0.20.5"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.20.5.tgz#c67739074938b190e4430d5a5df3a724f296f639"
-  integrity sha512-CA0RkrKJETnaxGG6fBQHiojTZ8Sl+MCYsISbOqYYRfakHaM9mN4/a0v0bH1u5zi9ODyjyUmjfh7BqGfZagMjRw==
+cdktf@0.20.6:
+  version "0.20.6"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.20.6.tgz#1c18731c5bae26ce1f5f33773702900a571a8244"
+  integrity sha512-WoEpZu29SYIDdAPIyCyjz6mvw7L+2XBul5NEC3W/B7PLdg/OvfJqWoGkCJibqTEGy9r69R5u+BptAbmCGGf3iQ==
   dependencies:
     archiver "6.0.2"
     json-stable-stringify "1.1.1"
@@ -470,10 +470,10 @@ ts-node@10.9.2:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
-typescript@5.4.3:
-  version "5.4.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.3.tgz#5c6fedd4c87bee01cd7a528a30145521f8e0feff"
-  integrity sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==
+typescript@5.4.5:
+  version "5.4.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.5.tgz#42ccef2c571fdbd0f6718b1d1f5e6e5ef006f611"
+  integrity sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==
 
 undici-types@~5.26.4:
   version "5.26.5"
