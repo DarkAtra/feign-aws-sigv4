@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@cdktf/provider-aws@19.13.0":
-  version "19.13.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.13.0.tgz#1e651771923b6bd3be3a87fdae8fca109fdf313c"
-  integrity sha512-+YQCk5Z1/pAt9P9h7GEqBaGTVNceIu1bYekG9/we/RFSQuRkDmPwAmtPbTilnZN+BLfQcmVvQsQXSDx5q81vKQ==
+"@cdktf/provider-aws@19.14.0":
+  version "19.14.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.14.0.tgz#76ef98472fbf04ec163c284f4082c73586b17594"
+  integrity sha512-00AeWFyT+FWgkTf1h/hoUJGGL5l3RAtG32qtU+6k+PXfIn6vQz3weuRMonQdHGcKIQAuJrqXmEckOR26Hx/ClQ==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -135,10 +135,10 @@ call-bind@^1.0.5:
     get-intrinsic "^1.2.1"
     set-function-length "^1.1.1"
 
-cdktf@0.20.6:
-  version "0.20.6"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.20.6.tgz#1c18731c5bae26ce1f5f33773702900a571a8244"
-  integrity sha512-WoEpZu29SYIDdAPIyCyjz6mvw7L+2XBul5NEC3W/B7PLdg/OvfJqWoGkCJibqTEGy9r69R5u+BptAbmCGGf3iQ==
+cdktf@0.20.7:
+  version "0.20.7"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.20.7.tgz#7944dc73f40c2b97e445fd0284ae21f0ab5e8f0a"
+  integrity sha512-7za8QQYM1G0/6JUCYY+5smwNfNfbiZVPCMD7SeX2rTYmOLaGEkHZtMvuUTEKSqsE56fKudnfVd2J2edz2CETFg==
   dependencies:
     archiver "6.0.2"
     json-stable-stringify "1.1.1"
