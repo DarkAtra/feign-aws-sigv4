@@ -13,13 +13,13 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@cdktf/provider-aws": "19.24.1",
+    "@cdktf/provider-aws": "19.25.0",
     "cdktf": "0.20.8",
     "constructs": "10.3.0"
   },
   "devDependencies": {
-    "@types/node": "20.14.9",
+    "@types/node": "20.14.10",
     "ts-node": "10.9.2",
-    "typescript": "5.5.2"
+    "typescript": "5.5.3"
   }
 }
