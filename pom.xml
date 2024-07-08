@@ -62,8 +62,8 @@
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <kotlin.version>2.0.0</kotlin.version>
 
-        <awssdk-v1.version>1.12.753</awssdk-v1.version>
-        <awssdk-v2.version>2.26.12</awssdk-v2.version>
+        <awssdk-v1.version>1.12.757</awssdk-v1.version>
+        <awssdk-v2.version>2.26.17</awssdk-v2.version>
         <feign.version>13.3</feign.version>
         <assertj.version>3.26.0</assertj.version>
         <wiremock.version>3.8.0</wiremock.version>
