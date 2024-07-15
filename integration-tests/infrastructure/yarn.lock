@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@cdktf/provider-aws@19.25.0":
-  version "19.25.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.25.0.tgz#d188ebe380009cbd04f6b5ff1c815adc10c80fa8"
-  integrity sha512-9R3cd9hSFTZqXfw+sXWFjmdj6C0bI+tsHbs+vV3gxNOhNbe1Us+gs/992+cOvWZ+fMCp/n1mLE3UXxusOPY13A==
+"@cdktf/provider-aws@19.26.0":
+  version "19.26.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.26.0.tgz#7aba1949608514cc8f3c797dbbea423f973b27fd"
+  integrity sha512-f68ua90d33n7z//uX5FtrCV3kVW6oC/fMET3/cjEc+punuBg1X/a+9Hhn2z+Iu4ferknFhFZS3mwpjyyWH1DMQ==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"

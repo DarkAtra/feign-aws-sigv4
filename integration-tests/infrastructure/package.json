@@ -13,7 +13,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@cdktf/provider-aws": "19.25.0",
+    "@cdktf/provider-aws": "19.26.0",
     "cdktf": "0.20.8",
     "constructs": "10.3.0"
   },
