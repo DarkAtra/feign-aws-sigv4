@@ -23,8 +23,6 @@ jobs:
     permissions:
       # used by cycjimmy/semantic-release-action
       contents: write
-      issues: write
-      pull-requests: write
       packages: write
       # used by aws-actions/configure-aws-credentials
       id-token: write
