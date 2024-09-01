@@ -49,7 +49,7 @@ jobs:
           cache-dependency-path: integration-tests/infrastructure/yarn.lock
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3.1.1
+        uses: hashicorp/setup-terraform@v3.1.2
         with:
           terraform_version: 1.5.7
           terraform_wrapper: false
