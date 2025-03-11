@@ -7,7 +7,7 @@
     <parent>
         <groupId>de.darkatra</groupId>
         <artifactId>feign-aws-sigv4</artifactId>
-        <version>3.0.8</version>
+        <version>3.0.9</version>
     </parent>
 
     <artifactId>feign-aws-sigv4-common</artifactId>
