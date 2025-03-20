@@ -42,7 +42,7 @@ jobs:
           cache: 'maven'
 
       - name: Setup Node 20
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v4.3.0
         with:
           node-version: 20
           cache: 'yarn'
@@ -108,7 +108,7 @@ jobs:
 
       - id: semantic-release
         name: Create new release
-        uses: cycjimmy/semantic-release-action@v4.1.1
+        uses: cycjimmy/semantic-release-action@v4.2.0
         if: steps.run-tests.outcome == 'success'
         with:
           extra_plugins: |
