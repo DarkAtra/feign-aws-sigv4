@@ -42,7 +42,7 @@ jobs:
           cache: 'maven'
 
       - name: Setup Node 20
-        uses: actions/setup-node@v4.3.0
+        uses: actions/setup-node@v4.4.0
         with:
           node-version: 20
           cache: 'yarn'
@@ -55,7 +55,7 @@ jobs:
           terraform_wrapper: false
 
       - name: Setup AWS Credentials for Infrastructure
-        uses: aws-actions/configure-aws-credentials@v4.1.0
+        uses: aws-actions/configure-aws-credentials@v4.2.1
         with:
           aws-region: eu-central-1
           role-to-assume: arn:aws:iam::956243129466:role/github-deployer
@@ -76,7 +76,7 @@ jobs:
           echo "api-gateway-url=$(terraform output -raw api-gateway-url)" >> $GITHUB_OUTPUT
 
       - name: Setup AWS Credentials for Integration Tests
-        uses: aws-actions/configure-aws-credentials@v4.1.0
+        uses: aws-actions/configure-aws-credentials@v4.2.1
         with:
           aws-region: eu-central-1
           role-to-assume: ${{ steps.apply-infrastructure.outputs.integration-test-role-arn }}
@@ -87,7 +87,7 @@ jobs:
           mvn -B -ntp clean install failsafe:integration-test failsafe:verify -DapiGatewayUrl=${{ steps.apply-infrastructure.outputs.api-gateway-url }}
 
       - name: Setup AWS Credentials for Infrastructure
-        uses: aws-actions/configure-aws-credentials@v4.1.0
+        uses: aws-actions/configure-aws-credentials@v4.2.1
         if: always()
         with:
           aws-region: eu-central-1
