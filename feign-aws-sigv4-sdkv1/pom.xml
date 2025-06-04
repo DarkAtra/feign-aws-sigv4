@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>feign-aws-sigv4-sdkv1</artifactId>
+    <name>${artifactId}</name>
 
     <properties>
         <apiGatewayUrl/>
