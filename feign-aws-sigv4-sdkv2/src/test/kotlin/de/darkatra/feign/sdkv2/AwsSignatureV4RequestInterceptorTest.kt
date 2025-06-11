@@ -46,6 +46,10 @@ internal class AwsSignatureV4RequestInterceptorTest {
                     matching("AWS4-HMAC-SHA256 Credential=$ACCESS_KEY/[0-9]{8}/$REGION/$SERVICE/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date;x-amz-security-token, Signature=[a-z0-9]+")
                 )
                 .withHeader(
+                    AwsSignatureV4Constants.X_AMZ_CONTENT_SHA256,
+                    matching("[a-z0-9]+")
+                )
+                .withHeader(
                     AwsSignatureV4Constants.X_AMZ_DATE,
                     matching("[0-9]{8}T[0-9]{6}Z")
                 )
@@ -79,6 +83,10 @@ internal class AwsSignatureV4RequestInterceptorTest {
                 .withHeader(
                     AwsSignatureV4Constants.AUTHORIZATION,
                     matching("AWS4-HMAC-SHA256 Credential=$ACCESS_KEY/[0-9]{8}/$REGION/$SERVICE/aws4_request, SignedHeaders=content-length;host;x-amz-content-sha256;x-amz-date;x-amz-security-token, Signature=[a-z0-9]+")
+                )
+                .withHeader(
+                    AwsSignatureV4Constants.X_AMZ_CONTENT_SHA256,
+                    matching("[a-z0-9]+")
                 )
                 .withHeader(
                     AwsSignatureV4Constants.X_AMZ_DATE,
