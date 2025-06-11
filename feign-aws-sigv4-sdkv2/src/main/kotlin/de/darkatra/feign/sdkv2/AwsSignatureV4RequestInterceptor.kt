@@ -4,11 +4,11 @@ import de.darkatra.feign.common.AwsSignatureV4Constants
 import feign.RequestInterceptor
 import feign.RequestTemplate
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider
-import software.amazon.awssdk.auth.signer.Aws4Signer
-import software.amazon.awssdk.auth.signer.params.Aws4SignerParams
 import software.amazon.awssdk.core.sync.RequestBody
 import software.amazon.awssdk.http.SdkHttpFullRequest
 import software.amazon.awssdk.http.SdkHttpMethod
+import software.amazon.awssdk.http.auth.aws.signer.AwsV4FamilyHttpSigner
+import software.amazon.awssdk.http.auth.aws.signer.AwsV4HttpSigner
 import software.amazon.awssdk.regions.Region
 import java.net.URI
 import java.util.stream.Collectors
@@ -26,31 +26,32 @@ class AwsSignatureV4RequestInterceptor(
     private val region: Region
 ) : RequestInterceptor {
 
-    private val aws4Signer: Aws4Signer = Aws4Signer.create()
+    private val aws4Signer: AwsV4HttpSigner = AwsV4HttpSigner.create()
 
     override fun apply(template: RequestTemplate) {
 
         val body = template.body()
 
-        val signedRequest = aws4Signer.sign(
+        val signedRequest = aws4Signer.sign { request ->
             // convert the RequestTemplate to an SdkHttpFullRequest to delegate the signing process to the AWS SDK
-            SdkHttpFullRequest.builder()
-                .uri(getRequestUri(template))
-                .method(SdkHttpMethod.fromValue(template.method()))
-                .headers(convertHeaders(template.headers()))
-                .contentStreamProvider(
+            request
+                .identity(awsCredentialsProvider.resolveCredentials())
+                .request(
+                    SdkHttpFullRequest.builder()
+                        .uri(getRequestUri(template))
+                        .method(SdkHttpMethod.fromValue(template.method()))
+                        .headers(convertHeaders(template.headers()))
+                        .build()
+                )
+                .payload(
                     when {
                         body != null -> RequestBody.fromBytes(body).contentStreamProvider()
                         else -> RequestBody.empty().contentStreamProvider()
                     }
                 )
-                .build(),
-            Aws4SignerParams.builder()
-                .awsCredentials(awsCredentialsProvider.resolveCredentials())
-                .signingRegion(region)
-                .signingName(service)
-                .build()
-        )
+                .putProperty(AwsV4FamilyHttpSigner.SERVICE_SIGNING_NAME, service)
+                .putProperty(AwsV4HttpSigner.REGION_NAME, region.id())
+        }.request()
 
         // copy amazon specific headers over to the request template
         signedRequest.headers().entries.stream()
