@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>feign-aws-sigv4-common</artifactId>
-    <name>${artifactId}</name>
+    <name>${project.artifactId}</name>
 
     <dependencies>
         <!-- Kotlin -->

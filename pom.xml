@@ -42,7 +42,7 @@
     <version>3.0.15</version>
     <packaging>pom</packaging>
 
-    <name>${artifactId}</name>
+    <name>${project.artifactId}</name>
     <description>Provides feign request interceptors to sign http requests using AWS Signature V4.</description>
     <url>https://github.com/DarkAtra/feign-aws-sigv4</url>
 
