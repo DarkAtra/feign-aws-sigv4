@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@cdktf/provider-aws@21.0.0":
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-21.0.0.tgz#415f61761865dae64cf8bbe067bd43fb27def818"
-  integrity sha512-oZ2wvckEEcTEEs3Pbd+rwMy4ZBtgqTcl4v+8J0ax31bzKyOBinC1v73GIXhqviKtcYNvSm26RkFCGOA237Xhvg==
+"@cdktf/provider-aws@21.1.0":
+  version "21.1.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-21.1.0.tgz#2ceaed557bb3ec7404425a72df71fe302475f99b"
+  integrity sha512-znMkTohWr0fM9nPaHLSvr5AuAfybI97hC1IMXIzt1fPzAckf00hcowOHxJWfVD4QTClehEkVGiYXv8W76Nod0A==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
-"@types/node@22.15.32":
-  version "22.15.32"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.15.32.tgz#c301cc2275b535a5e54bb81d516b1d2e9afe06e5"
-  integrity sha512-3jigKqgSjsH6gYZv2nEsqdXfZqIFGAV36XYYjf9KGZ3PSG+IhLecqPnI310RvjutyMwifE2hhhNEklOUrvx/wA==
+"@types/node@22.16.0":
+  version "22.16.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.16.0.tgz#352bc4951fd089df32f2b6412a61d339b67ded8b"
+  integrity sha512-B2egV9wALML1JCpv3VQoQ+yesQKAmNMBIAY7OteVrikcOcAkWm+dGL6qpeCktPjAv6N1JLnhbNiqS35UpFyBsQ==
   dependencies:
     undici-types "~6.21.0"
 
