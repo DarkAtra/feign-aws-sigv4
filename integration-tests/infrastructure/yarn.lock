@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@cdktf/provider-aws@21.4.0":
-  version "21.4.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-21.4.0.tgz#3a7d05e5d46414c7e8759a6c0848c90495f2f1de"
-  integrity sha512-xPxmCMjqZ1XeNPCGYCQ4SaJzqKIsWdLZIE9K+6yLqcSJurI/mL6APtDSgFdDND8ToNzSSrGjGrB3pUwq4PPewg==
+"@cdktf/provider-aws@21.6.0":
+  version "21.6.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-21.6.0.tgz#aac003de93a3a6c5350b70c5a33408337a0ed5a1"
+  integrity sha512-uUoar5bwMf/dNM3XgkzYJQ9/F7jteV+EIM2igrJWdxwq6CL2S9Ss3LjckIcDbhuVhtIEwTo9dwwLx7Mu/ECcHA==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
-"@types/node@22.16.5":
-  version "22.16.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.16.5.tgz#cc46ac3994cd957000d0c11095a0b1dae2ea2368"
-  integrity sha512-bJFoMATwIGaxxx8VJPeM8TonI8t579oRvgAuT8zFugJsJZgzqv0Fu8Mhp68iecjzG7cnN3mO2dJQ5uUM2EFrgQ==
+"@types/node@22.17.0":
+  version "22.17.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.17.0.tgz#e8c9090e957bd4d9860efb323eb92d297347eac7"
+  integrity sha512-bbAKTCqX5aNVryi7qXVMi+OkB3w/OyblodicMbvE38blyAz7GxXf6XYhklokijuPwwVg9sDLKRxt0ZHXQwZVfQ==
   dependencies:
     undici-types "~6.21.0"
 
@@ -785,10 +785,10 @@ ts-node@10.9.2:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
-typescript@5.8.3:
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.3.tgz#92f8a3e5e3cf497356f4178c34cd65a7f5e8440e"
-  integrity sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==
+typescript@5.9.2:
+  version "5.9.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.2.tgz#d93450cddec5154a2d5cabe3b8102b83316fb2a6"
+  integrity sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==
 
 undici-types@~6.21.0:
   version "6.21.0"
