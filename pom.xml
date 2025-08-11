@@ -63,9 +63,9 @@
         <kotlin.version>2.2.0</kotlin.version>
 
         <awssdk-v1.version>1.12.788</awssdk-v1.version>
-        <awssdk-v2.version>2.32.15</awssdk-v2.version>
+        <awssdk-v2.version>2.32.20</awssdk-v2.version>
         <feign.version>13.6</feign.version>
-        <assertj.version>3.27.3</assertj.version>
+        <assertj.version>3.27.4</assertj.version>
         <wiremock.version>3.13.1</wiremock.version>
 
         <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
