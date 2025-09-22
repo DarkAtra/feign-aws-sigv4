@@ -41,17 +41,17 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Setup Node 20
+      - name: Setup Node.js Environment
         uses: actions/setup-node@v5.0.0
         with:
-          node-version: 20
+          node-version: 24
           cache: 'yarn'
           cache-dependency-path: integration-tests/infrastructure/yarn.lock
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3.1.2
         with:
-          terraform_version: 1.5.7
+          terraform_version: 1.13.3
           terraform_wrapper: false
 
       - name: Setup AWS Credentials for Infrastructure
