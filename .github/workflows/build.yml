@@ -108,7 +108,7 @@ jobs:
 
       - id: semantic-release
         name: Create new release
-        uses: cycjimmy/semantic-release-action@v5.0.0
+        uses: cycjimmy/semantic-release-action@v5.0.2
         if: steps.run-tests.outcome == 'success'
         with:
           extra_plugins: |
