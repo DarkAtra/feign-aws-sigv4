@@ -63,7 +63,7 @@
         <kotlin.version>2.3.0</kotlin.version>
 
         <awssdk-v1.version>1.12.797</awssdk-v1.version>
-        <awssdk-v2.version>2.40.17</awssdk-v2.version>
+        <awssdk-v2.version>2.41.1</awssdk-v2.version>
         <feign.version>13.6</feign.version>
         <assertj.version>3.27.6</assertj.version>
         <wiremock.version>3.13.2</wiremock.version>
