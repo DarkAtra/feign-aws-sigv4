@@ -6,7 +6,7 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "lib": [
-      "es2018"
+      "es2020"
     ],
     "module": "CommonJS",
     "noEmitOnError": true,
@@ -17,11 +17,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
+    "rootDir": "./",
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "stripInternal": true,
-    "target": "ES2018",
+    "types": [
+      "node"
+    ],
+    "target": "ES2020",
     "incremental": true,
     "skipLibCheck": true
   },
