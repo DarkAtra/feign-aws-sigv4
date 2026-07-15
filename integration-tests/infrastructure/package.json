@@ -15,10 +15,10 @@
   "dependencies": {
     "@cdktf/provider-aws": "21.22.1",
     "cdktf": "0.21.0",
-    "constructs": "10.6.0"
+    "constructs": "10.7.0"
   },
   "devDependencies": {
-    "@types/node": "24.12.4",
+    "@types/node": "24.13.3",
     "ts-node": "10.9.2",
     "typescript": "6.0.3"
   }
