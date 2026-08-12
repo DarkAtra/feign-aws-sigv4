@@ -289,10 +289,10 @@ compress-commons@^6.0.2:
     normalize-path "^3.0.0"
     readable-stream "^4.0.0"
 
-constructs@10.7.2:
-  version "10.7.2"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.7.2.tgz#871fccc7fe2c6037a5a2c8f01620ddb54b39e515"
-  integrity sha512-vA7JOqvO/xwq2HBCuq3qc6V2R9mHZCxJ8HPoucUcUWJY88YULe7bzMcsdBy27/gJJIphZi73U1oIXDY2Eqg6nA==
+constructs@10.8.1:
+  version "10.8.1"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.8.1.tgz#83877700caa85fdfee9eacd16fd4be16393a7aa6"
+  integrity sha512-98yGXYyhePqPYh3cYu8nzBERmAhC0DONe3UD03okK0nehZ7hYP4wgZuf02a04+uOWxnTJ5Rpp5m0GRNpwyLGGA==
 
 core-util-is@~1.0.0:
   version "1.0.3"
