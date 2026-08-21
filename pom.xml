@@ -63,8 +63,8 @@
         <java.version>17</java.version>
 
         <awssdk-v1.version>1.12.797</awssdk-v1.version>
-        <awssdk-v2.version>2.52.1</awssdk-v2.version>
-        <feign.version>13.13</feign.version>
+        <awssdk-v2.version>2.54.1</awssdk-v2.version>
+        <feign.version>13.14</feign.version>
         <assertj.version>3.27.7</assertj.version>
         <wiremock.version>3.13.2</wiremock.version>
 
