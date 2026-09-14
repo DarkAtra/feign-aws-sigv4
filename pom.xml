@@ -39,7 +39,7 @@
 
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4</artifactId>
-    <version>5.0.0-next.3</version>
+    <version>5.0.0</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
@@ -87,7 +87,7 @@
             <dependency>
                 <groupId>de.darkatra</groupId>
                 <artifactId>feign-aws-sigv4-common</artifactId>
-                <version>5.0.0-next.3</version>
+                <version>5.0.0</version>
             </dependency>
 
             <!-- Feign -->
