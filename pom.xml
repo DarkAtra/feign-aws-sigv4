@@ -39,7 +39,7 @@
 
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4</artifactId>
-    <version>4.0.4</version>
+    <version>5.0.0-next.3</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
@@ -48,7 +48,6 @@
 
     <modules>
         <module>feign-aws-sigv4-common</module>
-        <module>feign-aws-sigv4-sdkv1</module>
         <module>feign-aws-sigv4-sdkv2</module>
     </modules>
 
@@ -62,7 +61,6 @@
         <kotlin.version>2.4.10</kotlin.version>
         <java.version>17</java.version>
 
-        <awssdk-v1.version>1.12.797</awssdk-v1.version>
         <awssdk-v2.version>2.54.13</awssdk-v2.version>
         <feign.version>13.14</feign.version>
         <assertj.version>3.27.7</assertj.version>
@@ -89,7 +87,7 @@
             <dependency>
                 <groupId>de.darkatra</groupId>
                 <artifactId>feign-aws-sigv4-common</artifactId>
-                <version>4.0.4</version>
+                <version>5.0.0-next.3</version>
             </dependency>
 
             <!-- Feign -->
@@ -99,13 +97,6 @@
                 <version>${feign.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <!-- Aws Sdk V1 -->
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-sts</artifactId>
-                <version>${awssdk-v1.version}</version>
             </dependency>
 
             <!-- Aws Sdk V2 -->
@@ -214,7 +205,6 @@
     <profiles>
         <profile>
             <id>sign-with-gpg</id>
-
             <build>
                 <plugins>
                     <plugin>
