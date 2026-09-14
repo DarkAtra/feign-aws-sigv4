@@ -134,7 +134,10 @@ class IntegrationTestStack extends TerraformStack {
                         'Condition': {
                             'StringEquals': {
                                 'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
-                                'token.actions.githubusercontent.com:sub': 'repo:DarkAtra/feign-aws-sigv4:ref:refs/heads/main'
+                                'token.actions.githubusercontent.com:sub': [
+                                    'repo:DarkAtra/feign-aws-sigv4:ref:refs/heads/main',
+                                    'repo:DarkAtra/feign-aws-sigv4:ref:refs/heads/next'
+                                ]
                             }
                         }
                     }
