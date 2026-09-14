@@ -17,13 +17,19 @@ import java.util.stream.Collectors
  * Feign [RequestInterceptor] that signs http requests with Signature V4. Uses the AWS SDK V2.
  *
  * @param awsCredentialsProvider the [AwsCredentialsProvider] used to sign the request
- * @param service the service to sign the requests for. Use 'execute-api' if you're issuing requests against AWS API Gateway.
+ * @param service the service to sign the requests for. Use 'execute-api' if
+ * you're issuing requests against AWS API Gateway or 'vpc-lattice-svcs' for AWS VPC Lattice.
  * @param region the region
+ * @param payloadSigningEnabled whether to sign the request payload. Set this to `false` when
+ * talking to AWS VPC Lattice, which does not support payload signing and requires the
+ * `x-amz-content-sha256` header to be set to `UNSIGNED-PAYLOAD`. Note that unsigned payloads
+ * are only permitted over https.
  */
 class AwsSignatureV4RequestInterceptor(
     private val awsCredentialsProvider: AwsCredentialsProvider,
     private val service: String,
-    private val region: Region
+    private val region: Region,
+    private val payloadSigningEnabled: Boolean = true
 ) : RequestInterceptor {
 
     private val aws4Signer: AwsV4HttpSigner = AwsV4HttpSigner.create()
@@ -35,6 +41,7 @@ class AwsSignatureV4RequestInterceptor(
         val signedRequest = aws4Signer.sign { request ->
             // convert the RequestTemplate to an SdkHttpFullRequest to delegate the signing process to the AWS SDK
             request
+                .putProperty(AwsV4FamilyHttpSigner.PAYLOAD_SIGNING_ENABLED, payloadSigningEnabled)
                 .identity(awsCredentialsProvider.resolveCredentials())
                 .request(
                     SdkHttpFullRequest.builder()

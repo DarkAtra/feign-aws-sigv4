@@ -14,9 +14,10 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import software.amazon.awssdk.auth.credentials.AwsSessionCredentials
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider
+import software.amazon.awssdk.http.auth.aws.signer.SignerConstant
 import software.amazon.awssdk.regions.Region
 
-@WireMockTest
+@WireMockTest(httpsEnabled = true)
 internal class AwsSignatureV4RequestInterceptorTest {
 
     companion object {
@@ -28,12 +29,12 @@ internal class AwsSignatureV4RequestInterceptorTest {
     }
 
     private val awsCredentialsProvider = StaticCredentialsProvider.create(AwsSessionCredentials.create(ACCESS_KEY, SECRET_KEY, SESSION_TOKEN))
-    private val awsSignatureV4RequestInterceptor = AwsSignatureV4RequestInterceptor(awsCredentialsProvider, SERVICE, Region.of(REGION))
 
     @Test
     internal fun shouldSignGetRequestWithQueryParameters(wireMockRuntimeInfo: WireMockRuntimeInfo) {
 
-        val testClient = TestClient.create(wireMockRuntimeInfo.httpBaseUrl, awsSignatureV4RequestInterceptor)
+        val awsSignatureV4RequestInterceptor = AwsSignatureV4RequestInterceptor(awsCredentialsProvider, SERVICE, Region.of(REGION))
+        val testClient = TestClient.create(wireMockRuntimeInfo.httpsBaseUrl, awsSignatureV4RequestInterceptor, true)
 
         val queryParameter = "query-parameter"
         val expectedResponse = "response-body"
@@ -72,7 +73,8 @@ internal class AwsSignatureV4RequestInterceptorTest {
     @Test
     internal fun shouldSignPostRequestWithBody(wireMockRuntimeInfo: WireMockRuntimeInfo) {
 
-        val testClient = TestClient.create(wireMockRuntimeInfo.httpBaseUrl, awsSignatureV4RequestInterceptor)
+        val awsSignatureV4RequestInterceptor = AwsSignatureV4RequestInterceptor(awsCredentialsProvider, SERVICE, Region.of(REGION))
+        val testClient = TestClient.create(wireMockRuntimeInfo.httpsBaseUrl, awsSignatureV4RequestInterceptor, true)
 
         val body = "request-body"
         val expectedResponse = "response-body"
@@ -87,6 +89,47 @@ internal class AwsSignatureV4RequestInterceptorTest {
                 .withHeader(
                     AwsSignatureV4Constants.X_AMZ_CONTENT_SHA256,
                     matching("[a-z0-9]+")
+                )
+                .withHeader(
+                    AwsSignatureV4Constants.X_AMZ_DATE,
+                    matching("[0-9]{8}T[0-9]{6}Z")
+                )
+                .withHeader(
+                    AwsSignatureV4Constants.X_AMZ_SECURITY_TOKEN,
+                    equalTo(SESSION_TOKEN)
+                )
+                .willReturn(
+                    aResponse()
+                        .withStatus(200)
+                        .withBody(expectedResponse)
+                )
+        )
+
+        val actualResponse = testClient.postRequestWithBody(body)
+
+        assertThat(actualResponse).isEqualTo(expectedResponse)
+    }
+
+    @Test
+    internal fun shouldSignPostRequestWithoutBody(wireMockRuntimeInfo: WireMockRuntimeInfo) {
+
+        // the aws sdk only allows unsigned payloads over https, so this needs to run against the https endpoint
+        val awsSignatureV4RequestInterceptor = AwsSignatureV4RequestInterceptor(awsCredentialsProvider, SERVICE, Region.of(REGION), false)
+        val testClient = TestClient.create(wireMockRuntimeInfo.httpsBaseUrl, awsSignatureV4RequestInterceptor, true)
+
+        val body = "request-body"
+        val expectedResponse = "response-body"
+
+        wireMockRuntimeInfo.wireMock.register(
+            post(urlPathEqualTo("/path"))
+                .withRequestBody(equalTo(body))
+                .withHeader(
+                    AwsSignatureV4Constants.AUTHORIZATION,
+                    matching("AWS4-HMAC-SHA256 Credential=$ACCESS_KEY/[0-9]{8}/$REGION/$SERVICE/aws4_request, SignedHeaders=content-length;host;x-amz-content-sha256;x-amz-date;x-amz-security-token, Signature=[a-z0-9]+")
+                )
+                .withHeader(
+                    AwsSignatureV4Constants.X_AMZ_CONTENT_SHA256,
+                    equalTo(SignerConstant.UNSIGNED_PAYLOAD)
                 )
                 .withHeader(
                     AwsSignatureV4Constants.X_AMZ_DATE,
