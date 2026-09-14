@@ -11,7 +11,7 @@ Include the following dependency in your project:
 <dependency>
     <groupId>de.darkatra</groupId>
     <artifactId>feign-aws-sigv4-sdkv2</artifactId>
-    <version>4.0.0</version>
+    <version>5.0.0</version>
 </dependency>
 ```
 [//]: # (@formatter:on)

@@ -205,7 +205,6 @@
     <profiles>
         <profile>
             <id>sign-with-gpg</id>
-
             <build>
                 <plugins>
                     <plugin>
