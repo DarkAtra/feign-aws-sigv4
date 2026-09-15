@@ -26,7 +26,7 @@ jobs:
       # used by aws-actions/configure-aws-credentials
       id-token: write
     outputs:
-      test-outcome: ${{ steps.run-tests.outcome }}
+      tests-outcome: ${{ steps.run-tests.outcome }}
     steps:
       - uses: actions/checkout@v7.0.1
         with:
