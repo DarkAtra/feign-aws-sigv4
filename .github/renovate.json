@@ -16,6 +16,16 @@
       "matchPackageNames": [
         "/de.darkatra:*/"
       ]
+    },
+    {
+      "matchDatasources": [
+        "java-version"
+      ],
+      "matchPackageNames": [
+        "java-jdk"
+      ],
+      "versioning": "semver-partial",
+      "allowedVersions": ">=17 <18"
     }
   ]
 }
