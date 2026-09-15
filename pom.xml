@@ -58,11 +58,11 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
         <kotlin.code.style>official</kotlin.code.style>
-        <kotlin.version>2.4.10</kotlin.version>
+        <kotlin.version>2.4.20</kotlin.version>
         <java.version>17</java.version>
 
-        <awssdk-v2.version>2.54.13</awssdk-v2.version>
-        <feign.version>13.14</feign.version>
+        <awssdk-v2.version>2.54.18</awssdk-v2.version>
+        <feign.version>13.15</feign.version>
         <assertj.version>3.27.7</assertj.version>
         <wiremock.version>3.13.2</wiremock.version>
 
