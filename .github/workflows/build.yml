@@ -20,7 +20,7 @@ permissions:
 jobs:
   verify:
     name: Verify
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: read
       # used by aws-actions/configure-aws-credentials
@@ -85,7 +85,7 @@ jobs:
 
   build:
     name: Build & Release
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs:
       - verify
     permissions:
@@ -128,7 +128,7 @@ jobs:
 
   publish-maven-central:
     name: Publish to Maven Central
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs:
       - build
     if: needs.build.outputs.new-release-published == 'true'
