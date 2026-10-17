@@ -58,11 +58,11 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
         <kotlin.code.style>official</kotlin.code.style>
-        <kotlin.version>2.4.20</kotlin.version>
+        <kotlin.version>2.4.21</kotlin.version>
         <java.version>17</java.version>
 
-        <awssdk-v2.version>2.55.11</awssdk-v2.version>
-        <feign.version>13.16</feign.version>
+        <awssdk-v2.version>2.56.0</awssdk-v2.version>
+        <feign.version>13.17</feign.version>
         <assertj.version>3.27.7</assertj.version>
         <wiremock.version>3.13.2</wiremock.version>
 
@@ -71,7 +71,7 @@
         <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
         <dokka-maven-plugin.version>2.2.0</dokka-maven-plugin.version>
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
-        <central-publishing-maven-plugin.version>0.11.0</central-publishing-maven-plugin.version>
+        <central-publishing-maven-plugin.version>0.12.0</central-publishing-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
