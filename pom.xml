@@ -61,13 +61,13 @@
         <kotlin.version>2.4.21</kotlin.version>
         <java.version>17</java.version>
 
-        <awssdk-v2.version>2.56.0</awssdk-v2.version>
+        <awssdk-v2.version>2.57.8</awssdk-v2.version>
         <feign.version>13.17</feign.version>
         <assertj.version>3.27.7</assertj.version>
         <wiremock.version>3.13.2</wiremock.version>
 
-        <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
-        <maven-failsafe-plugin.version>3.6.0</maven-failsafe-plugin.version>
+        <maven-surefire-plugin.version>3.6.1</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.6.1</maven-failsafe-plugin.version>
         <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
         <dokka-maven-plugin.version>2.2.0</dokka-maven-plugin.version>
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
